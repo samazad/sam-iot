@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: sam-iot
+  host: sam-iot
+  disk_quota: 1024M
+  services:
+  - sam-iot-cloudantNoSQLDB
+  - sam-iot-iotf-service
