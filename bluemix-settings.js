@@ -52,11 +52,11 @@ var settings = module.exports = {
     httpStatic: path.join(__dirname,"public"),
 
     functionGlobalContext: {
-    	crc:require(crc)
+    	crc:require('crc')
     },
 
     storageModule: require("./couchstorage")
-}
+};
 
 if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
     settings.adminAuth = {
@@ -76,7 +76,7 @@ if (process.env.NODE_RED_USERNAME && process.env.NODE_RED_PASSWORD) {
                 return when.resolve(null);
             }
         }
-    }
+    };
 }
 
 settings.couchAppname = VCAP_APPLICATION['application_name'];
